@@ -1,10 +1,11 @@
 {
-  "name": "zadanie_17_5",
+  "name": "zadanie_17_7",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "globstar jshint *.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +16,9 @@
     "passport": "^0.4.0",
     "passport-google-oauth": "^1.0.0",
     "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "globstar": "^1.0.0",
+    "jshint": "^2.9.5"
   }
 }

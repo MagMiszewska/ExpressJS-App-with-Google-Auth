@@ -32,21 +32,21 @@ passport.use(new GoogleStrategy({
 ));
 
 //app routes
-app.get('/', function(req, res){
+app.get('/', function (req, res) {
     res.render('index', { user: req.user });
 });
 
-app.get('/logged', function(req, res){
+app.get('/logged', function (req, res) {
     res.render('logged', { user: googleProfile });
 });
 //Passport routes
 app.get('/auth/google',
-passport.authenticate('google', {
-scope : ['profile', 'email']
-}));
+    passport.authenticate('google', {
+        scope: ['profile', 'email']
+    }));
 app.get('/auth/google/callback',
     passport.authenticate('google', {
-        successRedirect : '/logged',
+        successRedirect: '/logged',
         failureRedirect: '/'
     }));
 
